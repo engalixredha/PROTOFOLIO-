@@ -24,6 +24,13 @@
 <link href="https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-mono@5.0.18/600.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/@fontsource/poppins@5.0.12/800.css" rel="stylesheet">
 <style>
+  @font-face{
+    font-family:'PanoramaNaskh';
+    src:url('https://alfont.com/wp-content/fonts/persian-fonts//alfont_com_PanoramaNaskhMobile-Scribble.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+  }
   :root{
     --bg:#060b18;
     --bg-elev:#0a1530;
@@ -172,6 +179,24 @@
   .btn.solid:hover{ background:#5bb6ff; }
   .btn.ghost{ border-color:var(--border); color:var(--text-dim); }
   .btn.ghost:hover{ border-color:var(--text-dim); color:var(--text); background:transparent; }
+
+  .btn-ar{
+    font-family:'PanoramaNaskh', 'Inter', sans-serif;
+    font-size:16px;
+    letter-spacing:0.02em;
+    padding:10px 22px;
+    background:var(--accent);
+    color:#ffffff;
+    border:1px solid var(--accent);
+    border-radius:4px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    white-space:nowrap;
+    transition:background 0.2s, transform 0.2s;
+  }
+  .btn-ar:hover{ background:#5bb6ff; transform:translateY(-1px); }
+  .btn-ar:active{ transform:translateY(0); }
 
   .menu-toggle{
     display:none;
@@ -469,6 +494,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-cta">
+      <a href="https://engalixredha.github.io/PROTOFOLIO-AR/" target="_blank" rel="noopener" class="btn-ar">ألنُسخة ألعربية</a>
       <a href="https://drive.google.com/file/d/1LWc6O05_65o8o5gqcpiGAHIkt9bT-Fqz/view?usp=drivesdk" target="_blank" rel="noopener" class="btn ghost">Resume ↓</a>
       <a href="#contact" class="btn solid">Contact →</a>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">≡</button>
@@ -481,6 +507,7 @@
     <a href="#skills">Skills</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
+    <a href="https://engalixredha.github.io/PROTOFOLIO-AR/" target="_blank" rel="noopener" style="font-family:'PanoramaNaskh','Inter',sans-serif; color:#ffffff; background:var(--accent); font-size:16px;">ألنُسخة ألعربية</a>
   </div>
 </header>
 
