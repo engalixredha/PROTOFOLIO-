@@ -101,36 +101,6 @@
     display:inline-block;
   }
 
-  /* ===== STATUS BAR ===== */
-  .statusbar{
-    background:#030714;
-    border-bottom:1px solid var(--border-soft);
-    font-family:var(--mono);
-    font-size:11px;
-    color:var(--text-faint);
-    letter-spacing:0.05em;
-  }
-  .statusbar .wrap{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    height:34px;
-  }
-  .statusbar .dot{
-    width:6px; height:6px; border-radius:50%;
-    background:var(--green);
-    display:inline-block;
-    margin-right:7px;
-    box-shadow:0 0 8px var(--green);
-  }
-  .statusbar .status-right{ display:flex; gap:20px; align-items:center; }
-  @media (max-width:680px){
-    .statusbar .status-right span:nth-child(2){ display:none; }
-  }
-  @media (max-width:480px){
-    .statusbar .wrap{ font-size:10px; }
-  }
-
   /* ===== NAV ===== */
   header.nav{
     position:sticky; top:0; z-index:50;
@@ -182,21 +152,19 @@
 
   .btn-ar{
     font-family:'PanoramaNaskh', 'Inter', sans-serif;
-    font-size:16px;
+    font-size:13px;
     letter-spacing:0.02em;
-    padding:10px 22px;
+    padding:11px 20px;
     background:var(--accent);
-    color:#ffffff;
+    color:#eef1f5;
     border:1px solid var(--accent);
-    border-radius:4px;
     display:inline-flex;
     align-items:center;
     gap:8px;
     white-space:nowrap;
-    transition:background 0.2s, transform 0.2s;
+    transition:background 0.2s, color 0.2s;
   }
-  .btn-ar:hover{ background:#5bb6ff; transform:translateY(-1px); }
-  .btn-ar:active{ transform:translateY(0); }
+  .btn-ar:hover{ background:#5bb6ff; }
 
   .menu-toggle{
     display:none;
@@ -466,16 +434,6 @@
 
 <div class="scroll-progress" id="scrollProgress"></div>
 
-<div class="statusbar">
-  <div class="wrap">
-    <span><span class="dot"></span>SYS:AKINARO-OS / BUILD 2026.06</span>
-    <span class="status-right">
-      <span id="statusFlag">AVAILABLE_FOR_WORK</span>
-      <span id="clock">BAGHDAD --:--:--</span>
-    </span>
-  </div>
-</div>
-
 <header class="nav">
   <div class="wrap">
     <a href="#top" class="brand">
@@ -494,9 +452,9 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-cta">
-      <a href="https://engalixredha.github.io/PROTOFOLIO-AR/" target="_blank" rel="noopener" class="btn-ar">ألنُسخة ألعربية</a>
       <a href="https://drive.google.com/file/d/1LWc6O05_65o8o5gqcpiGAHIkt9bT-Fqz/view?usp=drivesdk" target="_blank" rel="noopener" class="btn ghost">Resume ↓</a>
       <a href="#contact" class="btn solid">Contact →</a>
+      <a href="https://engalixredha.github.io/PROTOFOLIO-AR/" target="_blank" rel="noopener" class="btn-ar">ألنُسخة ألعربية</a>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">≡</button>
     </div>
   </div>
@@ -507,7 +465,7 @@
     <a href="#skills">Skills</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
-    <a href="https://engalixredha.github.io/PROTOFOLIO-AR/" target="_blank" rel="noopener" style="font-family:'PanoramaNaskh','Inter',sans-serif; color:#ffffff; background:var(--accent); font-size:16px;">ألنُسخة ألعربية</a>
+    <a href="https://engalixredha.github.io/PROTOFOLIO-AR/" target="_blank" rel="noopener" style="font-family:'PanoramaNaskh','Inter',sans-serif; color:#eef1f5; background:var(--accent); font-size:13px;">ألنُسخة ألعربية</a>
   </div>
 </header>
 
@@ -799,17 +757,6 @@
 </main>
 
 <script>
-  // Live clock — Baghdad local time
-  function tick(){
-    const now = new Date();
-    const opts = { timeZone:'Asia/Baghdad', hour:'2-digit', minute:'2-digit', second:'2-digit', hour12:false };
-    const t = now.toLocaleTimeString('en-GB', opts);
-    const el = document.getElementById('clock');
-    if(el) el.textContent = 'BAGHDAD ' + t;
-  }
-  tick();
-  setInterval(tick, 1000);
-
   // Mobile menu toggle
   const menuToggle = document.getElementById('menuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
