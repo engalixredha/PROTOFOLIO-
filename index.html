@@ -329,7 +329,7 @@
   /* ===== PROCESS ===== */
   .process-wrap{ display:grid; grid-template-columns:280px 1fr 1fr; gap:0; border:1px solid var(--border-soft); }
   .process-steps{ border-right:1px solid var(--border-soft); }
-  .pstep{ padding:28px 26px; border-bottom:1px solid var(--border-soft); cursor:default; }
+  .pstep{ padding:28px 26px; border-bottom:1px solid var(--border-soft); cursor:pointer; }
   .pstep:last-child{ border-bottom:none; }
   .pstep .pnum{ font-family:var(--mono); font-size:11px; color:var(--text-faint); letter-spacing:0.1em; }
   .pstep h4{ font-family:var(--display); font-size:21px; font-weight:800; text-transform:uppercase; margin-top:6px; }
@@ -556,13 +556,13 @@
       </div>
       <div class="process-wrap reveal">
         <div class="process-steps">
-          <div class="pstep active"><div class="pnum">01</div><h4>Define</h4></div>
-          <div class="pstep"><div class="pnum">02</div><h4>Build &amp; Integrate</h4></div>
-          <div class="pstep"><div class="pnum">03</div><h4>Deploy &amp; Support</h4></div>
+          <div class="pstep active" data-desc="Design business management systems and software solutions based on real operational requirements — not a template. Plan the full solution before writing a line of code." data-tag="STEP 01 OF 03"><div class="pnum">01</div><h4>Define</h4></div>
+          <div class="pstep" data-desc="Write the application, integrate it with any required hardware, and connect the moving parts — frontend, backend, database, and devices — into one working system." data-tag="STEP 02 OF 03"><div class="pnum">02</div><h4>Build &amp; Integrate</h4></div>
+          <div class="pstep" data-desc="Ship the solution, test it under real conditions, and stay on hand to configure, troubleshoot, and support it after launch." data-tag="STEP 03 OF 03"><div class="pnum">03</div><h4>Deploy &amp; Support</h4></div>
         </div>
         <div class="process-desc">
-          <p>Design business management systems and software solutions based on real operational requirements — not a template. Plan the full solution before writing a line of code.</p>
-          <div class="step-tag">STEP 01 OF 03</div>
+          <p id="processDescText">Design business management systems and software solutions based on real operational requirements — not a template. Plan the full solution before writing a line of code.</p>
+          <div class="step-tag" id="processStepTag">STEP 01 OF 03</div>
         </div>
         <div class="code-panel">
           <div class="code-head"><span>system-config.json</span><span class="ready">READY</span></div>
@@ -776,10 +776,14 @@
   }
 
   // Process step click
+  const processDescText = document.getElementById('processDescText');
+  const processStepTag = document.getElementById('processStepTag');
   document.querySelectorAll('.pstep').forEach((step, i) => {
     step.addEventListener('click', () => {
       document.querySelectorAll('.pstep').forEach(s => s.classList.remove('active'));
       step.classList.add('active');
+      if(processDescText) processDescText.textContent = step.dataset.desc;
+      if(processStepTag) processStepTag.textContent = step.dataset.tag;
     });
   });
 
