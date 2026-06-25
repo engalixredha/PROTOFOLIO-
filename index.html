@@ -271,17 +271,6 @@
     padding:0 28px;
     border-right:1px solid var(--border-soft);
   }
-  .marquee-track .marquee-logo{
-    width:190px;
-    height:48px;
-    aspect-ratio:3390/850;
-    color:var(--text-faint);
-    padding:0 28px;
-    border-right:1px solid var(--border-soft);
-    flex-shrink:0;
-    display:inline-block;
-    vertical-align:middle;
-  }
   @keyframes scroll{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
 
   /* ===== SECTION SHARED ===== */
@@ -338,34 +327,7 @@
     .cap-stat{ text-align:left; }
   }
 
-  /* ===== PROCESS ===== */
-  .process-wrap{ display:grid; grid-template-columns:280px 1fr 1fr; gap:0; border:1px solid var(--border-soft); }
-  .process-steps{ border-right:1px solid var(--border-soft); }
-  .pstep{ padding:28px 26px; border-bottom:1px solid var(--border-soft); cursor:pointer; }
-  .pstep:last-child{ border-bottom:none; }
-  .pstep .pnum{ font-family:var(--mono); font-size:11px; color:var(--text-faint); letter-spacing:0.1em; }
-  .pstep h4{ font-family:var(--display); font-size:21px; font-weight:800; text-transform:uppercase; margin-top:6px; }
-  .pstep.active{ background:var(--bg-elev); border-left:2px solid var(--accent); margin-left:-1px; }
-  .pstep.active h4{ color:var(--accent); }
 
-  .process-desc{ padding:40px 36px; border-right:1px solid var(--border-soft); display:flex; flex-direction:column; justify-content:space-between; }
-  .process-desc p{ color:var(--text-dim); font-size:15.5px; }
-  .process-desc .step-tag{ font-family:var(--mono); font-size:11px; color:var(--text-faint); letter-spacing:0.08em; margin-top:24px; }
-
-  .code-panel{ background:#070d1c; padding:0; display:flex; flex-direction:column; }
-  .code-head{ display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-bottom:1px solid var(--border-soft); font-family:var(--mono); font-size:11.5px; color:var(--text-faint); }
-  .code-head .ready{ color:var(--green); display:flex; align-items:center; gap:6px; }
-  .code-head .ready::before{ content:''; width:6px; height:6px; border-radius:50%; background:var(--green); }
-  .code-body{ padding:20px 22px; font-family:var(--mono); font-size:12.5px; line-height:1.8; color:#a9c4e0; overflow-x:auto; }
-  .code-body .ln{ color:var(--text-faint); margin-right:14px; user-select:none; }
-  .code-body .kw{ color:var(--accent); }
-  .code-body .str{ color:var(--amber); }
-  .code-body .cm{ color:var(--text-faint); }
-
-  @media (max-width:900px){
-    .process-wrap{ grid-template-columns:1fr; }
-    .process-steps, .process-desc{ border-right:none; }
-  }
 
   /* ===== PROJECTS ===== */
   #projects{ display:none; } /* hidden for now — remove this rule to reveal the section */
@@ -424,9 +386,9 @@
   .cta-section h2 .accent{ color:var(--accent); }
   .cta-section p{ color:var(--text-dim); max-width:520px; margin-top:22px; font-size:16px; }
   .cta-actions{ display:flex; gap:14px; margin-top:38px; flex-wrap:wrap; }
-  .cta-stats{ display:flex; gap:48px; margin-top:64px; flex-wrap:wrap; border-top:1px solid var(--border-soft); padding-top:32px; }
-  .cta-stats div .v{ font-family:var(--display); font-size:32px; font-weight:900; color:var(--text); }
-  .cta-stats div .l{ font-family:var(--mono); font-size:11px; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.05em; margin-top:4px; }
+  .cta-stats{ display:flex; gap:48px; margin-top:32px; margin-bottom:0; flex-wrap:wrap; padding:28px 0; }
+  .cta-stats div .v{ font-family:var(--display); font-size:36px; font-weight:900; color:var(--text); white-space:nowrap; }
+  .cta-stats div .l{ font-family:var(--mono); font-size:12px; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.05em; margin-top:6px; }
 
   .cta-layout{ display:flex; justify-content:space-between; align-items:flex-start; gap:48px; flex-wrap:wrap; }
   .cta-main{ flex:1 1 480px; }
@@ -631,88 +593,7 @@
 
   <div class="marquee">
     <div class="marquee-track">
-      <span>PYTHON</span><span>C++</span><span>JAVASCRIPT</span><span>NODE.JS</span><svg class="marquee-logo" version="1.0" xmlns="http://www.w3.org/2000/svg"
- viewBox="0 0 3390.000000 850.000000"
- preserveAspectRatio="xMidYMid meet">
-<g transform="translate(0.000000,850.000000) scale(0.100000,-0.100000)"
-fill="currentColor" stroke="none">
-<path d="M7410 7955 l0 -295 295 0 295 0 0 295 0 295 -295 0 -295 0 0 -295z"/>
-<path d="M6227 8233 c-4 -3 -7 -136 -7 -295 l0 -288 -2677 -2 -2678 -3 -3
--3572 -2 -3573 3575 0 3575 0 0 2680 0 2680 298 2 297 3 0 295 0 295 -297 3
--298 2 0 290 0 290 -295 0 -295 0 0 -290 0 -290 295 0 295 0 0 -300 0 -300
--295 0 -295 0 0 284 c0 156 -3 291 -6 300 -5 14 -41 16 -300 16 l-294 0 0 295
-0 295 -294 0 c-259 0 -295 2 -300 16 -3 9 -6 144 -6 300 l0 284 300 0 300 0 2
--297 3 -298 270 -3 c149 -1 280 0 293 3 l22 5 -2 293 -3 292 -292 3 -293 2 0
-295 0 295 -293 0 c-162 0 -297 -3 -300 -7z m-3855 -2956 c7 -8 42 -60 78 -116
-36 -56 108 -168 161 -249 53 -81 188 -289 301 -462 113 -173 231 -355 262
--403 38 -57 63 -87 73 -85 9 2 55 63 102 136 95 146 251 387 560 862 112 173
-209 318 215 322 6 5 133 7 281 5 l270 -2 0 -1345 0 -1345 -300 0 -300 0 -3
-768 c-2 627 -5 767 -15 767 -11 0 -390 -565 -535 -796 l-34 -54 -242 0 -243 0
--279 420 c-153 231 -285 420 -291 420 -10 0 -13 -162 -15 -762 l-3 -763 -300
-0 -300 0 -3 1335 c-1 734 0 1341 3 1348 7 18 538 17 557 -1z m4733 -287 l0
--295 -365 -5 -365 -5 -5 -1045 -5 -1045 -310 0 -310 0 -5 1045 -5 1045 -365 5
--365 5 -3 285 c-1 157 0 290 3 297 3 11 214 13 1052 11 l1048 -3 0 -295z"/>
-<path d="M8025 7638 c-3 -8 -4 -141 -3 -298 l3 -285 270 -3 c149 -1 280 0 293
-3 l22 5 -2 293 -3 292 -288 3 c-226 2 -289 0 -292 -10z"/>
-<path d="M29795 5319 c-184 -20 -391 -92 -539 -187 -339 -217 -545 -596 -575
--1060 -30 -467 98 -872 364 -1151 269 -282 630 -411 1063 -380 299 21 547 139
-755 358 68 71 177 220 177 241 0 12 -27 32 -232 171 -244 165 -255 172 -268
-164 -5 -3 -28 -32 -49 -63 -21 -32 -71 -87 -110 -125 -117 -110 -235 -157
--391 -157 -430 1 -680 332 -657 869 9 208 46 344 127 469 114 178 287 264 525
-264 121 0 206 -21 302 -78 59 -34 170 -144 219 -218 20 -31 38 -56 40 -56 3 0
-187 125 416 282 43 29 78 58 78 65 0 28 -112 176 -199 264 -160 159 -302 241
--517 299 -137 37 -355 49 -529 29z"/>
-<path d="M11985 5268 c-3 -13 -4 -621 -3 -1353 l3 -1330 299 -3 c233 -2 301 1
-308 10 4 7 8 354 8 771 0 416 4 757 9 757 4 0 136 -191 291 -425 l283 -425
-241 0 241 0 70 108 c268 412 496 752 505 752 6 0 11 -259 12 -772 l3 -773 305
-0 305 0 3 1339 c1 981 -1 1342 -9 1352 -16 19 -527 20 -551 2 -18 -14 -96
--132 -528 -798 -354 -546 -343 -529 -357 -530 -7 0 -24 18 -38 40 -26 41 -101
-157 -260 400 -44 69 -193 297 -329 507 -172 264 -254 383 -269 387 -12 3 -138
-6 -279 6 l-258 0 -5 -22z"/>
-<path d="M15317 5283 c-4 -3 -7 -613 -7 -1355 l0 -1348 935 0 935 0 0 290 0
-290 -620 0 -620 0 2 248 3 247 568 3 567 2 -2 288 -3 287 -567 3 -568 2 0 235
-0 235 603 2 602 3 3 275 c2 250 1 276 -15 288 -13 9 -212 12 -913 12 -493 0
--900 -3 -903 -7z"/>
-<path d="M17538 5284 c-5 -4 -8 -614 -8 -1356 l0 -1349 618 4 c510 3 632 6
-702 19 328 62 546 172 741 374 158 165 252 350 311 614 21 94 23 130 23 340 0
-241 -6 294 -47 449 -118 440 -413 738 -843 851 -187 49 -235 52 -880 57 -335
-3 -613 2 -617 -3z m1265 -622 c186 -51 314 -154 390 -314 71 -149 82 -204 82
--413 0 -144 -4 -194 -19 -250 -65 -245 -218 -406 -452 -476 -61 -19 -103 -22
--356 -26 l-288 -5 0 749 c0 412 3 753 8 757 4 4 131 6 282 3 240 -3 285 -7
-353 -25z"/>
-<path d="M20313 5283 c-10 -4 -13 -284 -13 -1354 l0 -1349 315 0 315 0 -2
-1353 -3 1352 -300 2 c-165 1 -306 -1 -312 -4z"/>
-<path d="M21255 5277 c-3 -7 -4 -140 -3 -297 l3 -285 367 -3 368 -2 2 -1053 3
--1052 315 0 315 0 3 1053 2 1052 370 0 370 0 0 294 c0 259 -2 295 -16 300 -9
-3 -483 6 -1055 6 -828 0 -1041 -3 -1044 -13z"/>
-<path d="M23692 5278 c-9 -9 -12 -321 -12 -1342 0 -732 4 -1337 8 -1344 7 -9
-77 -12 318 -10 l309 3 3 453 2 452 183 0 183 0 35 -67 c20 -38 71 -135 114
--218 43 -82 97 -186 120 -230 23 -44 79 -151 124 -237 l83 -158 369 0 c203 0
-369 3 369 8 0 4 -10 23 -21 42 -19 31 -109 185 -339 580 -36 63 -102 176 -145
-250 -46 80 -73 136 -66 138 6 2 39 22 72 44 179 119 287 280 339 504 30 126
-30 352 1 476 -42 177 -110 297 -234 414 -88 83 -158 126 -280 172 -193 72
--302 81 -1007 82 -389 0 -519 -3 -528 -12z m1132 -582 c196 -38 286 -135 286
--309 -1 -126 -50 -212 -153 -263 -85 -44 -161 -54 -409 -54 l-228 0 0 320 0
-320 214 0 c145 0 239 -5 290 -14z"/>
-<path d="M26976 5275 c-8 -8 -18 -25 -21 -38 -7 -21 -57 -155 -360 -957 -155
--412 -277 -733 -407 -1080 -55 -146 -103 -274 -108 -285 -22 -52 -120 -319
--120 -326 0 -5 150 -9 334 -9 l334 0 45 128 c25 70 69 196 98 279 l54 153 472
-0 c291 0 474 -4 478 -10 5 -8 39 -105 160 -450 l33 -95 328 -3 c180 -1 331 1
-335 5 5 5 -50 163 -122 353 -72 190 -152 404 -179 475 -26 72 -90 243 -143
-380 -52 138 -136 360 -187 495 -51 135 -142 376 -202 535 -60 160 -121 322
--135 360 -39 111 -17 105 -368 105 -257 0 -306 -2 -319 -15z m383 -956 c21
--63 53 -152 70 -199 120 -339 131 -374 119 -382 -17 -10 -479 -10 -496 1 -10
-6 8 69 83 282 53 151 108 308 123 349 27 77 42 98 54 76 4 -7 25 -64 47 -127z"/>
-<path d="M31382 5278 c-9 -9 -12 -320 -12 -1339 0 -730 3 -1334 6 -1343 5 -14
-43 -16 320 -16 l314 0 0 426 0 426 109 111 c60 62 128 133 151 160 24 26 46
-47 50 47 4 0 30 -37 57 -82 28 -46 126 -207 218 -358 93 -151 230 -376 305
--500 l136 -225 398 -3 c318 -2 397 0 393 10 -2 7 -86 141 -185 298 -99 157
--201 317 -225 355 -24 39 -97 153 -162 255 -64 102 -139 219 -165 260 -71 111
--286 453 -294 468 -5 8 34 55 112 135 416 428 867 901 870 913 3 12 -54 14
--384 12 l-388 -3 -299 -325 c-164 -179 -385 -418 -489 -532 -105 -115 -194
--208 -199 -208 -5 0 -9 236 -9 535 l0 535 -308 0 c-226 0 -311 -3 -320 -12z"/>
-</g>
-</svg><span>HTML / CSS</span><span>SYSTEM DESIGN</span><span>HARDWARE-SOFTWARE INTEGRATION</span><span>TELECOM SYSTEMS</span><span>GRAPHIC DESIGN</span><span>PROJECT COORDINATION</span>
+      <span>PYTHON</span><span>C++</span><span>JAVASCRIPT</span><span>NODE.JS</span><span>HTML / CSS</span><span>SYSTEM DESIGN</span><span>HARDWARE-SOFTWARE INTEGRATION</span><span>TELECOM SYSTEMS</span><span>GRAPHIC DESIGN</span><span>PROJECT COORDINATION</span>
       <span>PYTHON</span><span>C++</span><span>JAVASCRIPT</span><span>NODE.JS</span><span>HTML / CSS</span><span>SYSTEM DESIGN</span><span>HARDWARE-SOFTWARE INTEGRATION</span><span>TELECOM SYSTEMS</span><span>GRAPHIC DESIGN</span><span>PROJECT COORDINATION</span>
     </div>
   </div>
@@ -721,7 +602,7 @@ fill="currentColor" stroke="none">
     <div class="wrap">
       <div class="section-head reveal">
         <div class="eyebrow">Capabilities</div>
-        <h2>WHAT I <span class="dim">BUILD</span></h2>
+        <h2>ROLES & <span class="dim">CAPABILITIES</span></h2>
       </div>
       <div class="cap-list">
         <div class="cap-row reveal-left">
@@ -764,40 +645,7 @@ fill="currentColor" stroke="none">
     </div>
   </section>
 
-  <section class="section tight">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Process</div>
-        <h2>HOW I <span class="dim">WORK</span></h2>
-      </div>
-      <div class="process-wrap reveal">
-        <div class="process-steps">
-          <div class="pstep active" data-desc="Design business management systems and software solutions based on real operational requirements — not a template. Plan the full solution before writing a line of code." data-tag="STEP 01 OF 03"><div class="pnum">01</div><h4>Define</h4></div>
-          <div class="pstep" data-desc="Write the application, integrate it with any required hardware, and connect the moving parts — frontend, backend, database, and devices — into one working system." data-tag="STEP 02 OF 03"><div class="pnum">02</div><h4>Build &amp; Integrate</h4></div>
-          <div class="pstep" data-desc="Ship the solution, test it under real conditions, and stay on hand to configure, troubleshoot, and support it after launch." data-tag="STEP 03 OF 03"><div class="pnum">03</div><h4>Deploy &amp; Support</h4></div>
-        </div>
-        <div class="process-desc">
-          <p id="processDescText">Design business management systems and software solutions based on real operational requirements — not a template. Plan the full solution before writing a line of code.</p>
-          <div class="step-tag" id="processStepTag">STEP 01 OF 03</div>
-        </div>
-        <div class="code-panel">
-          <div class="code-head"><span>system-config.json</span><span class="ready">READY</span></div>
-          <div class="code-body">
-<span class="ln">1</span>{<br>
-<span class="ln">2</span>&nbsp;&nbsp;<span class="str">"engineer"</span>: <span class="str">"Ali Redha Adnan"</span>,<br>
-<span class="ln">3</span>&nbsp;&nbsp;<span class="str">"stack"</span>: [<span class="str">"Python"</span>, <span class="str">"C++"</span>, <span class="str">"JavaScript"</span>, <span class="str">"Node.js"</span>],<br>
-<span class="ln">4</span>&nbsp;&nbsp;<span class="str">"focus"</span>: [<span class="str">"hardware-software integration"</span>, <span class="str">"system design"</span>],<br>
-<span class="ln">5</span>&nbsp;&nbsp;<span class="str">"support"</span>: <span class="str">"configure · test · troubleshoot"</span>,<br>
-<span class="ln">6</span>&nbsp;&nbsp;<span class="str">"status"</span>: <span class="str">"deployed"</span><br>
-<span class="ln">7</span>}<br>
-<span class="ln">8</span><br>
-<span class="ln">9</span><span class="cm">// built end-to-end: plan, develop,</span><br>
-<span class="ln">10</span><span class="cm">// deploy, and maintain</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <section class="section" id="projects">
     <div class="wrap">
@@ -833,25 +681,8 @@ fill="currentColor" stroke="none">
 
         <!-- MediTrack -->
         <a href="https://engalixredha.github.io/Meditrack-Website-/" target="_blank" rel="noopener" class="dp-card">
-          <div class="dp-card-logo">
-            <div class="dp-card-logo-inner">
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3464 1200" aria-label="MediTrack" role="img" style="fill:var(--accent);">
-              <g transform="translate(0,1200) scale(0.1,-0.1)">
-                <path d="M0 6000 l0 -6000 17320 0 17320 0 0 6000 0 6000 -17320 0 -17320 0 0 -6000z m8370 3715 l0 -295 -295 0 -295 0 0 295 0 295 295 0 295 0 0 -295z m-1180 -10 l0 -295 293 -2 292 -3 0 -295 0 -295 -292 -3 -293 -2 0 -295 0 -295 295 0 295 0 2 -297 3 -298 298 -3 297 -2 0 300 0 300 -295 0 -295 0 2 293 3 292 290 0 290 0 3 -292 2 -293 298 -2 297 -3 0 -295 0 -295 -297 -3 -298 -2 0 -2680 0 -2680 -3575 0 -3575 0 0 3575 0 3575 2680 0 2680 0 0 295 0 295 300 0 300 0 0 -295z m1785 -595 l0 -295 -292 -3 -293 -2 0 300 0 300 293 -2 292 -3 0 -295z m19511 -2051 c256 -35 500 -162 680 -351 67 -70 174 -220 174 -243 0 -7 -419 -299 -486 -338 -7 -4 -26 15 -46 46 -150 225 -359 328 -607 298 -288 -35 -466 -201 -543 -508 -19 -75 -22 -115 -22 -278 0 -201 11 -277 64 -417 30 -82 108 -196 171 -252 132 -118 357 -174 541 -135 142 30 284 133 384 280 43 62 50 68 66 57 10 -7 121 -83 248 -168 126 -85 229 -160 230 -166 0 -24 -103 -167 -177 -245 -182 -191 -385 -300 -647 -345 -142 -25 -438 -15 -571 19 -243 63 -422 165 -591 339 -270 277 -402 688 -373 1159 32 506 273 909 664 1111 143 73 270 112 465 141 56 9 304 6 376 -4z m-17210 -699 c262 -404 438 -665 447 -665 10 0 181 255 437 650 233 358 429 658 438 668 14 16 38 17 280 17 145 -1 270 -4 278 -7 12 -4 14 -197 14 -1354 l0 -1349 -310 0 -310 0 0 775 c0 614 -3 775 -12 775 -7 -1 -139 -194 -293 -430 l-280 -429 -241 -1 -241 0 -283 425 c-156 234 -289 425 -297 425 -11 0 -13 -133 -13 -770 l0 -770 -305 0 -305 0 0 1355 0 1355 282 -2 282 -3 432 -665z m4164 380 l0 -290 -600 0 -600 0 0 -235 0 -235 570 0 570 0 0 -290 0 -290 -570 0 -570 0 0 -250 0 -250 623 -2 622 -3 0 -285 0 -285 -937 -3 -938 -2 0 1355 0 1354 915 1 915 0 0 -290z m1750 262 c554 -100 894 -428 1010 -977 31 -148 39 -432 15 -597 -43 -308 -145 -525 -335 -719 -195 -198 -399 -303 -705 -361 -102 -20 -153 -21 -727 -25 l-618 -4 0 1349 c0 742 3 1352 8 1356 4 5 284 6 622 3 566 -4 624 -6 730 -25z m2040 -1327 l0 -1355 -315 0 -315 0 0 1348 c0 742 3 1352 7 1355 3 4 145 7 315 7 l308 0 0 -1355z m2438 1053 l2 -298 -370 0 -370 0 -2 -1052 -3 -1053 -317 -3 -318 -2 0 1055 0 1055 -370 0 -370 0 0 300 0 299 1058 -2 1057 -2 3 -297z m1647 279 c224 -40 395 -126 526 -264 134 -140 199 -294 217 -511 32 -377 -98 -683 -363 -851 -39 -25 -72 -46 -73 -47 -2 -1 127 -227 287 -503 160 -275 291 -502 291 -505 0 -4 -167 -5 -371 -4 l-370 3 -237 453 -236 452 -183 0 -183 0 0 -455 0 -455 -317 2 -318 3 -3 1340 c-1 737 0 1346 3 1354 8 21 1204 10 1330 -12z m3117 -1327 c279 -740 508 -1348 508 -1353 0 -4 -151 -6 -336 -5 l-336 3 -97 275 -96 275 -475 3 -475 2 -99 -280 -99 -280 -333 0 c-206 0 -334 4 -334 10 0 11 997 2656 1011 2683 9 16 33 17 332 15 l321 -3 508 -1345z m3880 808 l3 -540 320 348 c176 192 400 436 498 542 l179 193 389 -1 c214 -1 389 -3 389 -6 0 -3 -224 -237 -497 -521 -274 -284 -497 -522 -497 -529 1 -7 234 -379 518 -827 284 -449 516 -818 516 -821 0 -4 -178 -5 -396 -4 l-397 3 -354 580 c-194 319 -357 580 -362 580 -5 0 -77 -70 -160 -157 l-151 -156 0 -426 0 -426 -317 2 -318 3 -3 1330 c-1 732 0 1340 3 1353 l5 22 315 0 315 -1 2 -541z"/>
-                <path d="M6592 9113 l3 -298 298 -3 297 -2 0 300 0 300 -300 0 -300 0 2 -297z"/>
-                <path d="M2180 5700 l0 -1350 303 2 302 3 3 760 c1 417 6 763 10 767 5 5 136 -183 292 -417 l283 -425 241 0 241 0 280 427 c154 235 286 428 293 431 9 3 12 -156 12 -772 l0 -776 305 0 305 0 0 1350 0 1350 -279 0 -279 0 -215 -332 c-473 -729 -652 -1002 -662 -1002 -11 -1 11 -34 -487 732 l-392 602 -278 0 -278 0 0 -1350z"/>
-                <path d="M5370 6750 l0 -300 370 0 370 0 0 -1050 0 -1050 315 0 315 0 0 1050 0 1050 370 0 370 0 -2 298 -3 297 -1052 3 -1053 2 0 -300z"/>
-                <path d="M16460 5675 l0 -755 248 0 c272 1 354 10 467 55 194 77 328 237 382 455 25 105 25 395 0 490 -57 208 -151 342 -294 418 -146 77 -234 92 -555 92 l-248 0 0 -755z"/>
-                <path d="M22620 6130 l0 -320 228 0 c156 0 248 5 293 14 178 38 268 138 269 298 0 178 -83 272 -278 313 -46 10 -136 15 -289 15 l-223 0 0 -320z"/>
-                <path d="M25581 6178 c-33 -91 -241 -687 -241 -692 0 -3 117 -6 260 -6 143 0 260 1 260 3 0 2 -56 163 -125 357 -69 195 -125 356 -125 357 0 2 -5 3 -10 3 -6 0 -14 -10 -19 -22z"/>
-              </g>
-            </svg>
-            </div>
-          </div>
-          <div style="text-align:center;">
-            <div class="dp-card-tag">Web Application and Healthcare</div>
-            <div class="dp-card-desc">MediTrack &nbsp;·&nbsp; A medical clinical system.</div>
-          </div>
+
+
         </a>
 
       </div>
@@ -958,25 +789,25 @@ fill="currentColor" stroke="none">
   <section class="cta-section" id="contact">
     <div class="wrap">
       <div class="eyebrow reveal">Status: Open To Work</div>
-      <h2 class="reveal">LET'S BUILD <span class="accent">SOMETHING.</span></h2>
+      <h2 class="reveal">GET IN <span class="accent">TOUCH.</span></h2>
       <div class="cta-layout">
         <div class="cta-main">
           <p class="reveal">Available for freelance development, systems design, and engineering work. Reach out by email, phone, or WhatsApp — usually quick to respond.</p>
-          <div class="cta-actions reveal">
-            <a href="mailto:eng.alixredha@gmail.com" class="btn solid">Send Email →</a>
-            <a href="tel:+9647710092221" class="btn">Call Now →</a>
-            <a href="https://wa.me/9647710092221" class="btn" target="_blank" rel="noopener">WhatsApp →</a>
-          </div>
           <div class="cta-stats reveal">
-            <div><div class="v">eng.alixredha<br>@gmail.com</div><div class="l">Email</div></div>
+            <div><div class="v">eng.alixredha@gmail.com</div><div class="l">Email</div></div>
             <div><div class="v">0771 009 2221</div><div class="l">Phone · Iraq</div></div>
             <div><div class="v">Nasiriyah</div><div class="l">Location</div></div>
-            <a href="https://wa.me/9647710092221" target="_blank" rel="noopener" class="wa-qr-block" aria-label="Scan to message on WhatsApp">
+          <a href="https://wa.me/9647710092221" target="_blank" rel="noopener" class="wa-qr-block" aria-label="Scan to message on WhatsApp">
               <svg class="wa-qr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 370" preserveAspectRatio="xMidYMid meet">
 <path d="M40,40h10v10h-10zM50,40h10v10h-10zM60,40h10v10h-10zM70,40h10v10h-10zM80,40h10v10h-10zM90,40h10v10h-10zM100,40h10v10h-10zM130,40h10v10h-10zM150,40h10v10h-10zM160,40h10v10h-10zM190,40h10v10h-10zM200,40h10v10h-10zM210,40h10v10h-10zM230,40h10v10h-10zM260,40h10v10h-10zM270,40h10v10h-10zM280,40h10v10h-10zM290,40h10v10h-10zM300,40h10v10h-10zM310,40h10v10h-10zM320,40h10v10h-10zM40,50h10v10h-10zM100,50h10v10h-10zM130,50h10v10h-10zM140,50h10v10h-10zM160,50h10v10h-10zM220,50h10v10h-10zM260,50h10v10h-10zM320,50h10v10h-10zM40,60h10v10h-10zM60,60h10v10h-10zM70,60h10v10h-10zM80,60h10v10h-10zM100,60h10v10h-10zM120,60h10v10h-10zM130,60h10v10h-10zM140,60h10v10h-10zM150,60h10v10h-10zM160,60h10v10h-10zM180,60h10v10h-10zM200,60h10v10h-10zM260,60h10v10h-10zM280,60h10v10h-10zM290,60h10v10h-10zM300,60h10v10h-10zM320,60h10v10h-10zM40,70h10v10h-10zM60,70h10v10h-10zM70,70h10v10h-10zM80,70h10v10h-10zM100,70h10v10h-10zM120,70h10v10h-10zM160,70h10v10h-10zM200,70h10v10h-10zM210,70h10v10h-10zM220,70h10v10h-10zM240,70h10v10h-10zM260,70h10v10h-10zM280,70h10v10h-10zM290,70h10v10h-10zM300,70h10v10h-10zM320,70h10v10h-10zM40,80h10v10h-10zM60,80h10v10h-10zM70,80h10v10h-10zM80,80h10v10h-10zM100,80h10v10h-10zM120,80h10v10h-10zM130,80h10v10h-10zM160,80h10v10h-10zM170,80h10v10h-10zM180,80h10v10h-10zM190,80h10v10h-10zM230,80h10v10h-10zM260,80h10v10h-10zM280,80h10v10h-10zM290,80h10v10h-10zM300,80h10v10h-10zM320,80h10v10h-10zM40,90h10v10h-10zM100,90h10v10h-10zM120,90h10v10h-10zM130,90h10v10h-10zM160,90h10v10h-10zM170,90h10v10h-10zM180,90h10v10h-10zM190,90h10v10h-10zM200,90h10v10h-10zM210,90h10v10h-10zM220,90h10v10h-10zM260,90h10v10h-10zM320,90h10v10h-10zM40,100h10v10h-10zM50,100h10v10h-10zM60,100h10v10h-10zM70,100h10v10h-10zM80,100h10v10h-10zM90,100h10v10h-10zM100,100h10v10h-10zM120,100h10v10h-10zM140,100h10v10h-10zM160,100h10v10h-10zM180,100h10v10h-10zM200,100h10v10h-10zM220,100h10v10h-10zM240,100h10v10h-10zM260,100h10v10h-10zM270,100h10v10h-10zM280,100h10v10h-10zM290,100h10v10h-10zM300,100h10v10h-10zM310,100h10v10h-10zM320,100h10v10h-10zM120,110h10v10h-10zM130,110h10v10h-10zM150,110h10v10h-10zM160,110h10v10h-10zM170,110h10v10h-10zM190,110h10v10h-10zM220,110h10v10h-10zM40,120h10v10h-10zM60,120h10v10h-10zM70,120h10v10h-10zM80,120h10v10h-10zM90,120h10v10h-10zM100,120h10v10h-10zM130,120h10v10h-10zM140,120h10v10h-10zM150,120h10v10h-10zM180,120h10v10h-10zM190,120h10v10h-10zM210,120h10v10h-10zM220,120h10v10h-10zM240,120h10v10h-10zM260,120h10v10h-10zM270,120h10v10h-10zM280,120h10v10h-10zM290,120h10v10h-10zM300,120h10v10h-10zM60,130h10v10h-10zM80,130h10v10h-10zM140,130h10v10h-10zM150,130h10v10h-10zM160,130h10v10h-10zM190,130h10v10h-10zM200,130h10v10h-10zM230,130h10v10h-10zM250,130h10v10h-10zM260,130h10v10h-10zM270,130h10v10h-10zM280,130h10v10h-10zM320,130h10v10h-10zM60,140h10v10h-10zM70,140h10v10h-10zM80,140h10v10h-10zM100,140h10v10h-10zM110,140h10v10h-10zM160,140h10v10h-10zM210,140h10v10h-10zM220,140h10v10h-10zM240,140h10v10h-10zM270,140h10v10h-10zM280,140h10v10h-10zM50,150h10v10h-10zM60,150h10v10h-10zM70,150h10v10h-10zM80,150h10v10h-10zM110,150h10v10h-10zM120,150h10v10h-10zM130,150h10v10h-10zM160,150h10v10h-10zM180,150h10v10h-10zM200,150h10v10h-10zM220,150h10v10h-10zM270,150h10v10h-10zM290,150h10v10h-10zM310,150h10v10h-10zM40,160h10v10h-10zM70,160h10v10h-10zM80,160h10v10h-10zM100,160h10v10h-10zM110,160h10v10h-10zM120,160h10v10h-10zM130,160h10v10h-10zM140,160h10v10h-10zM150,160h10v10h-10zM200,160h10v10h-10zM210,160h10v10h-10zM220,160h10v10h-10zM240,160h10v10h-10zM250,160h10v10h-10zM290,160h10v10h-10zM300,160h10v10h-10zM40,170h10v10h-10zM50,170h10v10h-10zM70,170h10v10h-10zM80,170h10v10h-10zM90,170h10v10h-10zM130,170h10v10h-10zM140,170h10v10h-10zM170,170h10v10h-10zM180,170h10v10h-10zM190,170h10v10h-10zM230,170h10v10h-10zM250,170h10v10h-10zM260,170h10v10h-10zM270,170h10v10h-10zM280,170h10v10h-10zM320,170h10v10h-10zM40,180h10v10h-10zM70,180h10v10h-10zM90,180h10v10h-10zM100,180h10v10h-10zM170,180h10v10h-10zM180,180h10v10h-10zM190,180h10v10h-10zM200,180h10v10h-10zM210,180h10v10h-10zM220,180h10v10h-10zM240,180h10v10h-10zM260,180h10v10h-10zM290,180h10v10h-10zM300,180h10v10h-10zM40,190h10v10h-10zM60,190h10v10h-10zM70,190h10v10h-10zM80,190h10v10h-10zM90,190h10v10h-10zM120,190h10v10h-10zM130,190h10v10h-10zM140,190h10v10h-10zM150,190h10v10h-10zM160,190h10v10h-10zM170,190h10v10h-10zM190,190h10v10h-10zM220,190h10v10h-10zM230,190h10v10h-10zM240,190h10v10h-10zM260,190h10v10h-10zM270,190h10v10h-10zM310,190h10v10h-10zM40,200h10v10h-10zM60,200h10v10h-10zM70,200h10v10h-10zM100,200h10v10h-10zM110,200h10v10h-10zM120,200h10v10h-10zM140,200h10v10h-10zM180,200h10v10h-10zM190,200h10v10h-10zM210,200h10v10h-10zM220,200h10v10h-10zM240,200h10v10h-10zM250,200h10v10h-10zM290,200h10v10h-10zM300,200h10v10h-10zM40,210h10v10h-10zM60,210h10v10h-10zM80,210h10v10h-10zM90,210h10v10h-10zM120,210h10v10h-10zM150,210h10v10h-10zM190,210h10v10h-10zM200,210h10v10h-10zM230,210h10v10h-10zM260,210h10v10h-10zM280,210h10v10h-10zM300,210h10v10h-10zM320,210h10v10h-10zM40,220h10v10h-10zM60,220h10v10h-10zM70,220h10v10h-10zM80,220h10v10h-10zM100,220h10v10h-10zM120,220h10v10h-10zM150,220h10v10h-10zM160,220h10v10h-10zM220,220h10v10h-10zM240,220h10v10h-10zM250,220h10v10h-10zM260,220h10v10h-10zM270,220h10v10h-10zM280,220h10v10h-10zM300,220h10v10h-10zM40,230h10v10h-10zM80,230h10v10h-10zM90,230h10v10h-10zM140,230h10v10h-10zM160,230h10v10h-10zM180,230h10v10h-10zM200,230h10v10h-10zM230,230h10v10h-10zM240,230h10v10h-10zM280,230h10v10h-10zM310,230h10v10h-10zM40,240h10v10h-10zM60,240h10v10h-10zM90,240h10v10h-10zM100,240h10v10h-10zM110,240h10v10h-10zM150,240h10v10h-10zM200,240h10v10h-10zM220,240h10v10h-10zM240,240h10v10h-10zM250,240h10v10h-10zM260,240h10v10h-10zM270,240h10v10h-10zM280,240h10v10h-10zM300,240h10v10h-10zM310,240h10v10h-10zM320,240h10v10h-10zM120,250h10v10h-10zM130,250h10v10h-10zM170,250h10v10h-10zM180,250h10v10h-10zM190,250h10v10h-10zM210,250h10v10h-10zM220,250h10v10h-10zM230,250h10v10h-10zM240,250h10v10h-10zM280,250h10v10h-10zM290,250h10v10h-10zM300,250h10v10h-10zM310,250h10v10h-10zM320,250h10v10h-10zM40,260h10v10h-10zM50,260h10v10h-10zM60,260h10v10h-10zM70,260h10v10h-10zM80,260h10v10h-10zM90,260h10v10h-10zM100,260h10v10h-10zM150,260h10v10h-10zM160,260h10v10h-10zM170,260h10v10h-10zM180,260h10v10h-10zM190,260h10v10h-10zM200,260h10v10h-10zM210,260h10v10h-10zM230,260h10v10h-10zM240,260h10v10h-10zM260,260h10v10h-10zM280,260h10v10h-10zM290,260h10v10h-10zM300,260h10v10h-10zM40,270h10v10h-10zM100,270h10v10h-10zM120,270h10v10h-10zM130,270h10v10h-10zM140,270h10v10h-10zM150,270h10v10h-10zM170,270h10v10h-10zM190,270h10v10h-10zM210,270h10v10h-10zM220,270h10v10h-10zM240,270h10v10h-10zM280,270h10v10h-10zM320,270h10v10h-10zM40,280h10v10h-10zM60,280h10v10h-10zM70,280h10v10h-10zM80,280h10v10h-10zM100,280h10v10h-10zM120,280h10v10h-10zM130,280h10v10h-10zM160,280h10v10h-10zM180,280h10v10h-10zM190,280h10v10h-10zM240,280h10v10h-10zM250,280h10v10h-10zM260,280h10v10h-10zM270,280h10v10h-10zM280,280h10v10h-10zM300,280h10v10h-10zM310,280h10v10h-10zM320,280h10v10h-10zM40,290h10v10h-10zM60,290h10v10h-10zM70,290h10v10h-10zM80,290h10v10h-10zM100,290h10v10h-10zM120,290h10v10h-10zM130,290h10v10h-10zM140,290h10v10h-10zM160,290h10v10h-10zM190,290h10v10h-10zM200,290h10v10h-10zM220,290h10v10h-10zM250,290h10v10h-10zM290,290h10v10h-10zM300,290h10v10h-10zM40,300h10v10h-10zM60,300h10v10h-10zM70,300h10v10h-10zM80,300h10v10h-10zM100,300h10v10h-10zM120,300h10v10h-10zM130,300h10v10h-10zM150,300h10v10h-10zM180,300h10v10h-10zM220,300h10v10h-10zM230,300h10v10h-10zM260,300h10v10h-10zM270,300h10v10h-10zM280,300h10v10h-10zM290,300h10v10h-10zM300,300h10v10h-10zM310,300h10v10h-10zM40,310h10v10h-10zM100,310h10v10h-10zM130,310h10v10h-10zM140,310h10v10h-10zM170,310h10v10h-10zM180,310h10v10h-10zM200,310h10v10h-10zM230,310h10v10h-10zM240,310h10v10h-10zM270,310h10v10h-10zM290,310h10v10h-10zM310,310h10v10h-10zM40,320h10v10h-10zM50,320h10v10h-10zM60,320h10v10h-10zM70,320h10v10h-10zM80,320h10v10h-10zM90,320h10v10h-10zM100,320h10v10h-10zM120,320h10v10h-10zM130,320h10v10h-10zM160,320h10v10h-10zM180,320h10v10h-10zM200,320h10v10h-10zM220,320h10v10h-10zM250,320h10v10h-10zM260,320h10v10h-10zM270,320h10v10h-10zM280,320h10v10h-10zM290,320h10v10h-10zM300,320h10v10h-10z" fill="currentColor"/>
 </svg>
               <span class="wa-qr-label">Scan for contact</span>
             </a>
+          </div>
+          <div class="cta-actions reveal">
+            <a href="mailto:eng.alixredha@gmail.com" class="btn solid">Send Email →</a>
+            <a href="tel:+9647710092221" class="btn">Call Now →</a>
+            <a href="https://wa.me/9647710092221" class="btn" target="_blank" rel="noopener">WhatsApp →</a>
           </div>
         </div>
       </div>
@@ -1036,17 +867,7 @@ fill="currentColor" stroke="none">
     });
   }
 
-  // Process step click
-  const processDescText = document.getElementById('processDescText');
-  const processStepTag = document.getElementById('processStepTag');
-  document.querySelectorAll('.pstep').forEach((step, i) => {
-    step.addEventListener('click', () => {
-      document.querySelectorAll('.pstep').forEach(s => s.classList.remove('active'));
-      step.classList.add('active');
-      if(processDescText) processDescText.textContent = step.dataset.desc;
-      if(processStepTag) processStepTag.textContent = step.dataset.tag;
-    });
-  });
+
 
   // Scroll reveal
   const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
