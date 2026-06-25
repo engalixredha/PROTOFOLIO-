@@ -65,6 +65,9 @@
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
+    scroll-snap-type:y mandatory;
+    overflow-y:scroll;
+    height:100vh;
   }
 
   a{ color:inherit; text-decoration:none; }
@@ -78,7 +81,7 @@
     outline-offset:3px;
   }
 
-  .wrap{ max-width:var(--max); margin:0 auto; padding:0 32px; }
+  .wrap{ max-width:var(--max); margin:0 auto; padding:0 32px; width:100%; }
   @media (max-width:600px){ .wrap{ padding:0 20px; } }
 
   .mono{ font-family:var(--mono); letter-spacing:0.04em; }
@@ -194,9 +197,14 @@
   /* ===== HERO ===== */
   .hero{
     position:relative;
+    min-height:100vh;
     padding:96px 0 70px;
     overflow:hidden;
     border-bottom:1px solid var(--border-soft);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    scroll-snap-align:start;
   }
   .hero-grid-bg{
     position:absolute; inset:0;
@@ -224,10 +232,11 @@
   .hero h1{
     font-family:var(--name-font);
     font-weight:800;
-    font-size:clamp(48px, 9vw, 104px);
+    font-size:clamp(32px, 6vw, 80px);
     line-height:1.02;
     letter-spacing:0.01em;
     text-transform:uppercase;
+    white-space:nowrap;
   }
   .hero h1 .accent{ color:var(--accent); }
   .hero p.lead{
@@ -274,8 +283,8 @@
   @keyframes scroll{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
 
   /* ===== SECTION SHARED ===== */
-  .section{ padding:110px 0; border-bottom:1px solid var(--border-soft); }
-  .section.tight{ padding:90px 0; }
+  .section{ padding:110px 0; border-bottom:1px solid var(--border-soft); min-height:100vh; display:flex; flex-direction:column; justify-content:center; scroll-snap-align:start; }
+  .section.tight{ padding:90px 0; min-height:100vh; display:flex; flex-direction:column; justify-content:center; scroll-snap-align:start; }
   .section-head{ max-width:680px; margin-bottom:64px; }
   .section-head h2{
     font-family:var(--display);
@@ -377,7 +386,7 @@
   @media (max-width:780px){ .edu-strip{ grid-template-columns:1fr; gap:30px; } }
 
   /* ===== CONTACT / FOOTER CTA ===== */
-  .cta-section{ padding:120px 0; text-align:left; position:relative; border-bottom:1px solid var(--border-soft); }
+  .cta-section{ padding:120px 0; text-align:left; position:relative; border-bottom:1px solid var(--border-soft); min-height:100vh; display:flex; flex-direction:column; justify-content:center; scroll-snap-align:start; }
   .cta-section h2{
     font-family:var(--display); font-weight:800;
     font-size:clamp(38px,7vw,80px);
@@ -577,7 +586,7 @@
     </svg>
     <div class="wrap hero-content">
       <div class="eyebrow">PORTFOLIO V1.0 · ELECTRICAL &amp; ELECTRONICS ENGINEERING</div>
-      <h1>ALI REDHA<br><span class="accent">ADNAN.</span></h1>
+      <h1>ALI REDHA <span class="accent">ADNAN</span></h1>
       <p class="lead">Electrical &amp; Electronics Engineering student building software, business systems, and telecom infrastructure — from circuit, to interface, to deployment. Based in Nasiriyah, Iraq.</p>
       <div class="hero-actions">
         <a href="#experience" class="btn solid">See Experience →</a>
